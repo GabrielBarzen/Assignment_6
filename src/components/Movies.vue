@@ -24,7 +24,7 @@
         //     gradeStr += "*";
         // }
         // movie.grade = gradeStr;
-        
+        movie.grade = parseInt(movie.grade);       
         movies.value.push(movie);
     }
 

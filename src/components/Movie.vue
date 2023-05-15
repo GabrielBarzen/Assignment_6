@@ -8,16 +8,6 @@
 
     }
 
-    // let gradeStars = document.createElement("span");
-    // let star = document.createElement("img");
-    // star.src = "./icons/star.png"
-
-    // for (let i = 0; i < props.grade; i++) {
-    //     gradeStars.appendChild(star);
-    // }
-
-    // document.getElementById("grades").innerHTML = gradeStars;
-    console.log(props.grade);
 
 
 </script>
@@ -28,8 +18,9 @@
             <span>
                 {{title}}
             </span>
-            <span>
-                <img src="./icons/star.png" v-for="grade in props.grade">
+            <span v-for="grade of props.grade">
+                <img src="./icons/star.png">
+                
             </span>
             <span>
                 <img src="./icons/delete.png" @click="remove"/>
