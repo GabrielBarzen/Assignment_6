@@ -17,7 +17,9 @@
     // }
 
     // document.getElementById("grades").innerHTML = gradeStars;
-    // console.log(props.grade);
+    console.log(props.grade);
+
+
 </script>
 
 <template>
@@ -26,8 +28,8 @@
             <span>
                 {{title}}
             </span>
-            <span id="grades">
-                {{ grade }}
+            <span>
+                <img src="./icons/star.png" v-for="grade in props.grade">
             </span>
             <span>
                 <img src="./icons/delete.png" @click="remove"/>
