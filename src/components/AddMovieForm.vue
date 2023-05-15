@@ -5,7 +5,12 @@
     const emit = defineEmits(['add-movie-event'])
 
     function passMovie(obj) {
-        emit("add-movie-event", obj)
+        let title = document.querySelector("#title-input");
+        let grade = document.querySelector("#grade-input");
+        title.value = "";
+        grade.value = "";
+
+        emit("add-movie-event", obj);
     }
 
 </script>
