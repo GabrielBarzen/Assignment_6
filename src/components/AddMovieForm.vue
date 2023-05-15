@@ -10,16 +10,14 @@
             <input type="text" class="input-group-text" name="title" id="title-input">
             <label for="grade">Grade:</label>
             <select class="input-group custom-select" name="grade" id="grade-input">
-                <option selected>Choose grade</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option selected value="">Choose grade</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
             </select>
+            <SaveMoviesButton />
         </form>
-    </div>
-    <div>
-        <SaveMoviesButton />
     </div>
 </template>
