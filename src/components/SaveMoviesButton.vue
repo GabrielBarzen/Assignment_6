@@ -1,4 +1,6 @@
 <script setup>
+    const emit = defineEmits(['pass-movie-event'])
+
     function submitMovie(e) {
         e.preventDefault();
 
@@ -11,15 +13,19 @@
             alert("Please enter title")
             valid = false;
         }
+
         if(grade.value == "") {
             alert("Please enter grade")
             valid = false;
         }
 
         if (valid) {
+            let obj = {title: title.value, grade: grade.value};
+            emit("pass-movie-event", obj)
         }
         
     }
+    
 </script>
 
 <template>

@@ -1,5 +1,7 @@
 
 <script setup>
+    defineProps(["title", "grade"]);
+    
     function remove(e) {
         let confirmed = confirm('Are you sure?');
         if (confirmed) e.target.parentElement.parentElement.remove();
@@ -9,13 +11,12 @@
 
 <template>
     <li>
-
         <div>
             <span>
-                ExampleText
+                {{title}}
             </span>
             <span>
-                *****
+                {{grade}}
             </span>
             <span @click="remove">
                 x
