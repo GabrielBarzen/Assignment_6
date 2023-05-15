@@ -1,8 +1,11 @@
 
 <script setup>
+    const emit = defineEmits(['order-grade'])
+    
     function orderByGrade() {
-      alert('ligma');
+        emit("order-grade");
     }
+    
 </script>
 
 <template>

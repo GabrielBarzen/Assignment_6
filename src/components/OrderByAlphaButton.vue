@@ -1,5 +1,8 @@
 <script setup>
+    const emit = defineEmits(['order-alpha'])
+    
     function orderByAlphabetic() {
+        emit("order-alpha");
     }
 </script>
 
