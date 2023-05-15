@@ -11,14 +11,6 @@
     </div>
     <div>
         <ul id="movie-list">
-            <Movie />
-            <Movie />
-            <Movie />
-            <Movie />
-            <Movie />
-            <Movie />
-            <Movie />
-            <Movie />
         </ul>
     </div>
         

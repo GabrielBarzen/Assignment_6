@@ -1,4 +1,7 @@
+
 <script setup>
+    import Movie from './Movie.vue'
+    import { h } from 'vue'
     function submitMovie(e) {
         e.preventDefault();
 
@@ -17,8 +20,16 @@
         }
 
         if (valid) {
-        }
-        
+            new Vue
+            console.log(Movie)
+            let mp = Movie;
+            mp.props = { 'title' : title.value, 'grade' : grade.value};
+            let ml = document.querySelector("#movie-list")
+            
+            ml.append(mp.render._sfc_render())
+            
+
+        }        
     }
 </script>
 
