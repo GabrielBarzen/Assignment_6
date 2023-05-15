@@ -1,10 +1,21 @@
 <script setup>
+    import AddMovieForm from './AddMovieForm.vue'
     import OrderByAlphaButton from './OrderByAlphaButton.vue'
     import OrderByGradeButton from './OrderByGradeButton.vue'
     import Movie from './Movie.vue'
     import { ref } from 'vue'
-  
-    const movies = ref([
+
+    function addMovie(movie) {
+        let gradeStr = "";
+        for (let i = 0; i < movie.grade; i++) {
+            gradeStr += "*";
+        }
+        movie.grade = gradeStr;
+        
+        movies.value.push(movie);
+    }
+
+    let movies = ref([
         {
             title: 'dogs 2',
             grade: "*****"
@@ -22,6 +33,7 @@
 </script>
 
 <template>
+    <AddMovieForm @add-movie-event="addMovie" />
     <div>
         <OrderByAlphaButton />
         <OrderByGradeButton />

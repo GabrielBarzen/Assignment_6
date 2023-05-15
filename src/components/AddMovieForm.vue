@@ -1,6 +1,13 @@
 
 <script setup>
     import SaveMoviesButton from './SaveMoviesButton.vue'
+
+    const emit = defineEmits(['add-movie-event'])
+
+    function passMovie(obj) {
+        emit("add-movie-event", obj)
+    }
+
 </script>
 
 <template>
@@ -17,7 +24,7 @@
                 <option value=4>4</option>
                 <option value=5>5</option>
             </select>
-            <SaveMoviesButton />
+            <SaveMoviesButton @pass-movie-event="passMovie"/>
         </form>
     </div>
 </template>
