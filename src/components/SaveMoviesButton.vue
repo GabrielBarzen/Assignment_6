@@ -25,12 +25,14 @@
         }
         
     }
-    
 </script>
 
 <template>
-    <input type="submit" name="submit-button" @click="submitMovie" class="btn btn-success">
+    <input id="submit" type="submit" name="submit-button" @click="submitMovie" class="btn btn-success">
 </template>
 
 <style scoped>
+#submit {
+    margin: 4px 0 2px 0 !important;
+}
 </style>

@@ -5,7 +5,6 @@
     function orderByGrade() {
         emit("order-grade");
     }
-    
 </script>
 
 <template>

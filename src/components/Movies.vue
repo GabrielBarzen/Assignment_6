@@ -7,46 +7,30 @@
 
     function orderGrade() {
         movies.value.sort((a, b) => {
+            console.log(movies)
             return b.grade-a.grade;
         })
+
     }
 
     function orderAlpha() {
-        console.log("DOOGGG")
         movies.value.sort((a, b) => {
+            console.log(movies)
             return ('' + a.title).localeCompare(b.title);
         })
     }
 
     function addMovie(movie) {
-        // let gradeStr = "";
-        // for (let i = 0; i < movie.grade; i++) {
-        //     gradeStr += "*";
-        // }
-        // movie.grade = gradeStr;
         movie.grade = parseInt(movie.grade);       
         movies.value.push(movie);
     }
 
-    let movies = ref([
-        {
-            title: 'dogs 2',
-            grade: 5
-        },
-        {
-            title: 'cat attack',
-            grade: 2
-        },
-        {
-            title: 'horse movie',
-            grade: 3
-        }
-    ]);
+    let movies = ref([]);
 
 </script>
 
 <template>
-    <AddMovieForm @add-movie-event="addMovie" />
+    <AddMovieForm @add-movie-event="addMovie"/>
     <div>
         <OrderByAlphaButton @order-alpha="orderAlpha"/>
         <OrderByGradeButton @order-grade="orderGrade"/>
@@ -60,3 +44,11 @@
     </div>
         
 </template>
+
+<style>
+ul {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+</style>

@@ -11,9 +11,8 @@
   </main>
 </template>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
+    button {
+      margin: 2px 0 !important;
     }
 </style>
 

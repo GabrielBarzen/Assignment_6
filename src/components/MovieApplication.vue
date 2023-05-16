@@ -4,7 +4,17 @@
 </script>
 
 <template>
-    <div>
+    <div id="app-container">
         <Movies />
     </div>
 </template>
+
+
+<style>
+    #app-container {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
