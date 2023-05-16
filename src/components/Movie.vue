@@ -1,10 +1,10 @@
 <script setup>
-    let props = defineProps(["title", "grade"]);
-    
+    let props = defineProps(["title", "grade", "id"]);
+    const emit = defineEmits(['movie-remove'])
     function remove(e) {
         let confirmed = confirm('Are you sure?');
-        if (confirmed) e.target.parentElement.parentElement.parentElement.remove();
-        
+        // if (confirmed) e.target.parentElement.parentElement.parentElement.remove();
+        emit("movie-remove",props.id)
     }
 
 </script>

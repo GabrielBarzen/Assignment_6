@@ -19,10 +19,18 @@
             return ('' + a.title).localeCompare(b.title);
         })
     }
-
+    let id = 0;
     function addMovie(movie) {
         movie.grade = parseInt(movie.grade);       
+        movie.id = id++;
         movies.value.push(movie);
+        console.log(movies.value)
+    }
+
+    function removeMovie(movie) {
+        movies.value = movies.value.filter(o => {
+            return o.id != movie.id;
+        })
     }
 
     let movies = ref([]);
@@ -37,9 +45,11 @@
     </div>
     <div>
         <ul>
-            <Movie v-for="movie in movies" 
+            <Movie  v-for="movie in movies" 
             :title="movie.title"
-            :grade="movie.grade" />
+            :grade="movie.grade"
+            :movie-id="movie.id"
+            @movie-remove="removeMovie(movie)"/>
         </ul>
     </div>
         
