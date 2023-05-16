@@ -19,7 +19,7 @@
             
             <div class="row">
                 <label for="title"  class="col-lg-1">Title:</label>
-                <input type="text" class="input-group-text col-lg-3" name="title" id="title-input">
+                <input type="text" class="input-group-text col-lg-9" name="title" id="title-input">
             </div>
 
             <div class="row">
